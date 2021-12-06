@@ -20,6 +20,8 @@
 		500AC36F275E18AA005614D5 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC36E275E18AA005614D5 /* About.swift */; };
 		500AC371275E18C7005614D5 /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC370275E18C7005614D5 /* FactsViewModel.swift */; };
 		500AC373275E18DB005614D5 /* FactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC372275E18DB005614D5 /* FactsDataSource.swift */; };
+		500AC377275E2ADE005614D5 /* FactsTableViewCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC376275E2ADE005614D5 /* FactsTableViewCell+UI.swift */; };
+		500AC379275E2BC4005614D5 /* FactsViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC378275E2BC4005614D5 /* FactsViewController+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		500AC36E275E18AA005614D5 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		500AC370275E18C7005614D5 /* FactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModel.swift; sourceTree = "<group>"; };
 		500AC372275E18DB005614D5 /* FactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDataSource.swift; sourceTree = "<group>"; };
+		500AC376275E2ADE005614D5 /* FactsTableViewCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsTableViewCell+UI.swift"; sourceTree = "<group>"; };
+		500AC378275E2BC4005614D5 /* FactsViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsViewController+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +144,8 @@
 		500AC365275E17E1005614D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				500AC36A275E186D005614D5 /* FactsViewController.swift */,
-				500AC36C275E188A005614D5 /* FactsTableViewCell.swift */,
+				500AC375275E2AC6005614D5 /* Cell */,
+				500AC374275E2AB0005614D5 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +165,24 @@
 				500AC36E275E18AA005614D5 /* About.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		500AC374275E2AB0005614D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				500AC36A275E186D005614D5 /* FactsViewController.swift */,
+				500AC378275E2BC4005614D5 /* FactsViewController+UI.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		500AC375275E2AC6005614D5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				500AC36C275E188A005614D5 /* FactsTableViewCell.swift */,
+				500AC376275E2ADE005614D5 /* FactsTableViewCell+UI.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +318,9 @@
 			files = (
 				500AC371275E18C7005614D5 /* FactsViewModel.swift in Sources */,
 				500AC36F275E18AA005614D5 /* About.swift in Sources */,
+				500AC379275E2BC4005614D5 /* FactsViewController+UI.swift in Sources */,
 				500AC336275E0B01005614D5 /* AppDelegate.swift in Sources */,
+				500AC377275E2ADE005614D5 /* FactsTableViewCell+UI.swift in Sources */,
 				500AC338275E0B01005614D5 /* SceneDelegate.swift in Sources */,
 				500AC36B275E186D005614D5 /* FactsViewController.swift in Sources */,
 				500AC36D275E188A005614D5 /* FactsTableViewCell.swift in Sources */,
