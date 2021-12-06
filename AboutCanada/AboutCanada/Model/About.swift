@@ -6,3 +6,13 @@
 //
 
 import Foundation
+struct About: Codable {
+    var screenTitle : String
+    var facts : [Fact]
+    
+    enum CodingKeys: String, CodingKey {
+        case screenTitle = "title"
+        case facts = "rows"
+    }
+    
+}

@@ -20,7 +20,13 @@ class FactsViewController: UIViewController {
                                  for: UIControl.Event.valueChanged)
         return refreshControl
     }()
+    let dataSource = FactsDataSource()
     
+    lazy var viewModel : FactsViewModel = {
+        let viewModel = FactsViewModel(dataSource: dataSource)
+        return viewModel
+    }()
+
     override func loadView() {
         super.loadView()
         safeArea = view.layoutMarginsGuide
@@ -30,9 +36,16 @@ class FactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Fetching Facts..."
+        bindData()
+        viewModel.fetchFacts()
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.title = "Refreshing Facts..."        
+        self.title = "Refreshing Facts..."
+            //Adding delay intentionally so that PullToReresh can be checked otherwise it's too fast that one is unable to guess what's happening
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.viewModel.fetchFacts()
+        }
+        
     }
 }
